@@ -2,55 +2,74 @@ body {
     background-color: black;
     color: white;
     font-size: 16px;
+    font-family: Verdana, Geneva, sans-serif;
     line-height: 1.5;
 }
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
+#form-container {
+    width: 100%;
+    height: 80px;
+    border-bottom: white 2px solid;
 }
 
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
+header {
+    float: left;
+    margin: 0 20px;
 }
 
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
+h1 {
+    padding: 10px;
+    color: #00bcd4;
+    font-size: 48px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: bold;
 }
 
-.animal {
-	background-color: magenta;
-	border: magenta 1px solid;
-	color: white;
-	padding: 10px;
-    margin: 0 10px;
-    border-radius: 5px;
+form {
+    float: right;
+    margin: 0 20px;
 }
 
 #add-button  {
-	background-color: magenta;
-	border: magenta 1px solid;
-	color: white;
-	border-radius: 5px;
-	padding:5px 10px;
+    background-color: #e91e63;
+    border: #e91e63 1px solid;
+    color: white;
+    font-weight: bolder;
+    margin: 20px 0px 20px -10px;
+    padding:6px 10px;
 }
 
-label, input  {	
+label  {    
     margin: 20px 10px;
 }
 
+input  {    
+    margin: 0px;
+    padding: 5px 20px;
+}
+
+.animal {
+	background-color: #9c27b0;
+	border: #9c27b0 1px solid;
+    color: white;
+	padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 #button-container {
-	margin: 10px 0;
+	margin: 20px 0;
+    clear: both;
+}
+
+figure {
+    display: inline-block;
 }
 
 .gif {

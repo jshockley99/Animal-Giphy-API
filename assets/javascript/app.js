@@ -46,15 +46,21 @@ $(document).ready(function() {
             // Clear any prior gif contents in #gif-container
                 $("#gif-container").empty();
 
-            // Loop through the animal gif data response to display img tag and related attributes
+            // Loop through the animal gif data response to display rating, image and related attributes
             for (var i = 0; i < results.length; i++) {
-               var animalImage = $("<img>");
+                var animalImage = $("<img>");
+                animalImage.addClass("gif");
                 animalImage.attr("src", results[i].images.fixed_width_still.url);
                 animalImage.attr("data-still", results[i].images.fixed_width_still.url);
                 animalImage.attr("data-animate", results[i].images.fixed_width.url);
                 animalImage.attr("data-state", "still");
-                animalImage.addClass("gif");
-                $("#gif-container").prepend(animalImage);
+                var animalRating = $("<figcaption>").text("Rating: " + results[i].rating);
+                animalRating.addClass("gif");
+                var animalItem = $("<figure>");
+                animalItem.addClass("gif-item");
+                animalItem.append(animalImage, animalRating);
+                $("#gif-container").append(animalItem);
+
             }
         });
     }
